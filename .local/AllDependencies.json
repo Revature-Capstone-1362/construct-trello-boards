@@ -415,7 +415,7 @@
           "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
-      "Microsoft.CSharp/4.5.0": {
+      "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp"
@@ -759,7 +759,7 @@
           "lib/net40/BouncyCastle.Crypto.dll": {}
         }
       },
-      "RestSharp/106.3.1": {
+      "RestSharp/106.15.0": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Web"
@@ -1881,13 +1881,14 @@
           "lib/net461/UiPath.Vision.dll": {}
         }
       },
-      "UiPath.WebAPI.Activities/1.7.0": {
+      "UiPath.WebAPI.Activities/1.11.1": {
         "type": "package",
         "dependencies": {
           "AvalonEdit": "6.0.1",
-          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.CSharp": "4.7.0",
           "Newtonsoft.Json": "11.0.2",
-          "RestSharp": "106.3.1"
+          "RestSharp": "106.15.0",
+          "UiPath.Platform": "21.12.0-preview"
         },
         "compile": {
           "lib/net461/_._": {}
@@ -2571,10 +2572,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.CSharp/4.5.0": {
-      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+    "Microsoft.CSharp/4.7.0": {
+      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "type": "package",
-      "path": "microsoft.csharp/4.5.0",
+      "path": "microsoft.csharp/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2587,6 +2588,7 @@
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
         "lib/portable-net45+win8+wp8+wpa81/_._",
         "lib/uap10.0.16299/_._",
         "lib/win8/_._",
@@ -2596,7 +2598,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.4.7.0.nupkg.sha512",
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -3115,17 +3117,20 @@
         "portable.bouncycastle.nuspec"
       ]
     },
-    "RestSharp/106.3.1": {
-      "sha512": "TmlN7SXjK52zzpQDTuzw7IH3XQ2Svtss/4zvQBKIgf74QIVxvlxoAqQYu1EhNQ1bMSBIQ4aK120BO7W+v8/kiQ==",
+    "RestSharp/106.15.0": {
+      "sha512": "HM7ohR6AscxedNenrrl93DSZG6hvdnA7O+NHyCl/6ZKTfn8psQ9rRmUpcb9eWr+140vmfxoVemql0bUoeGEW3A==",
       "type": "package",
-      "path": "restsharp/106.3.1",
+      "path": "restsharp/106.15.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
         "lib/netstandard2.0/RestSharp.dll",
-        "restsharp.106.3.1.nupkg.sha512",
-        "restsharp.nuspec"
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.106.15.0.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
       ]
     },
     "SharpZipLib/1.2.0": {
@@ -4371,10 +4376,10 @@
         "uipath.vision.nuspec"
       ]
     },
-    "UiPath.WebAPI.Activities/1.7.0": {
-      "sha512": "JU/+otCWKXZM20dmIYgr3dpq56Gq9CL0yOcoo5kxWdjcBJM4UdPcFW67Fl+S33jA/TOSXeSQR/NPlP60evNocw==",
+    "UiPath.WebAPI.Activities/1.11.1": {
+      "sha512": "oU35AbjyH8yIEg2+gJCWY8DCXIf9kALPMFIGAb+Mq3RSbiY+pQl2PI3Me6OJndizIwj7u2KemVeBPLXoXR/vuw==",
       "type": "package",
-      "path": "uipath.webapi.activities/1.7.0",
+      "path": "uipath.webapi.activities/1.11.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4403,7 +4408,45 @@
         "lib/net461/tr/UiPath.Web.Activities.resources.dll",
         "lib/net461/zh-CN/UiPath.Web.Activities.Design.resources.dll",
         "lib/net461/zh-CN/UiPath.Web.Activities.resources.dll",
-        "uipath.webapi.activities.1.7.0.nupkg.sha512",
+        "lib/net5.0-windows7.0/UiPath.Web.Activities.Design.dll",
+        "lib/net5.0-windows7.0/UiPath.Web.Activities.dll",
+        "lib/net5.0-windows7.0/UiPath.Web.dll",
+        "lib/net5.0-windows7.0/de/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/de/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0-windows7.0/es-MX/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/es-MX/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0-windows7.0/es/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/es/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0-windows7.0/fr/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/fr/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0-windows7.0/ja/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/ja/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0-windows7.0/ko/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/ko/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0-windows7.0/pt-BR/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/pt-BR/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0-windows7.0/pt/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/pt/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0-windows7.0/ru/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/ru/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0-windows7.0/tr/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/tr/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0-windows7.0/zh-CN/UiPath.Web.Activities.Design.resources.dll",
+        "lib/net5.0-windows7.0/zh-CN/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0/UiPath.Web.Activities.dll",
+        "lib/net5.0/UiPath.Web.dll",
+        "lib/net5.0/de/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0/es-MX/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0/es/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0/fr/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0/ja/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0/ko/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0/pt-BR/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0/pt/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0/ru/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0/tr/UiPath.Web.Activities.resources.dll",
+        "lib/net5.0/zh-CN/UiPath.Web.Activities.resources.dll",
+        "uipath.webapi.activities.1.11.1.nupkg.sha512",
         "uipath.webapi.activities.nuspec"
       ]
     }
@@ -4415,7 +4458,7 @@
       "UiPath.GSuite.Activities >= 1.16.2 <= 1.16.2",
       "UiPath.System.Activities >= 20.10.4 <= 20.10.4",
       "UiPath.UIAutomation.Activities >= 20.10.9 <= 20.10.9",
-      "UiPath.WebAPI.Activities >= 1.7.0 <= 1.7.0"
+      "UiPath.WebAPI.Activities >= 1.11.1 <= 1.11.1"
     ]
   },
   "packageFolders": {
@@ -4425,9 +4468,9 @@
     "restore": {
       "projectUniqueName": "Trello Backlog NextGen Automation",
       "projectName": "Trello Backlog NextGen Automation",
-      "projectPath": "G:\\Revature Training\\Myrepo\\Thomas-Vo\\Trello Backlog NextGen Automation\\.local",
+      "projectPath": "G:\\Revature-Capstone-1362\\construct-trello-boards\\.local",
       "packagesPath": "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\",
-      "outputPath": "G:\\Revature Training\\Myrepo\\Thomas-Vo\\Trello Backlog NextGen Automation\\.local"
+      "outputPath": "G:\\Revature-Capstone-1362\\construct-trello-boards\\.local"
     },
     "frameworks": {
       "net461": {
@@ -4455,7 +4498,7 @@
           "UiPath.WebAPI.Activities": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.7.0, 1.7.0]"
+            "version": "[1.11.1, 1.11.1]"
           }
         }
       }

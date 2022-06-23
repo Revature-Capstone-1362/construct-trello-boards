@@ -191,17 +191,20 @@
     {
       "Package": {
         "Id": "UiPath.WebAPI.Activities",
-        "Version": "1.7.0"
+        "Version": "1.11.1"
       },
       "Assemblies": [
         "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\avalonedit/6.0.1\\lib/net45/ICSharpCode.AvalonEdit.dll",
         "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\newtonsoft.json/13.0.1\\lib/net45/Newtonsoft.Json.dll",
-        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\restsharp/106.3.1\\lib/net452/RestSharp.dll",
-        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities/1.7.0\\lib/net461/UiPath.Web.Activities.Design.dll",
-        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities/1.7.0\\lib/net461/UiPath.Web.Activities.dll",
-        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities/1.7.0\\lib/net461/UiPath.Web.dll"
+        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\restsharp/106.15.0\\lib/net452/RestSharp.dll",
+        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\system.io.abstractions/3.0.10\\lib/net40/System.IO.Abstractions.dll",
+        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
+        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.platform/22.4.0\\lib/net461/UiPath.Platform.dll",
+        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities/1.11.1\\lib/net461/UiPath.Web.Activities.Design.dll",
+        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities/1.11.1\\lib/net461/UiPath.Web.Activities.dll",
+        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities/1.11.1\\lib/net461/UiPath.Web.dll"
       ],
-      "Path": "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities\\1.7.0"
+      "Path": "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities\\1.11.1"
     }
   ],
   "Conflicts": [],
@@ -560,7 +563,7 @@
     },
     "Microsoft.CSharp": {
       "Id": "Microsoft.CSharp",
-      "Version": "4.5.0",
+      "Version": "4.7.0",
       "Dependencies": []
     },
     "Microsoft.Extensions.Configuration": {
@@ -845,7 +848,7 @@
     },
     "RestSharp": {
       "Id": "RestSharp",
-      "Version": "106.3.1",
+      "Version": "106.15.0",
       "Dependencies": []
     },
     "SharpZipLib": {
@@ -1355,7 +1358,7 @@
     },
     "UiPath.WebAPI.Activities": {
       "Id": "UiPath.WebAPI.Activities",
-      "Version": "1.7.0",
+      "Version": "1.11.1",
       "Dependencies": [
         {
           "Item1": "AvalonEdit",
@@ -1363,7 +1366,7 @@
         },
         {
           "Item1": "Microsoft.CSharp",
-          "Item2": "[4.5.0, )"
+          "Item2": "[4.7.0, )"
         },
         {
           "Item1": "Newtonsoft.Json",
@@ -1371,7 +1374,11 @@
         },
         {
           "Item1": "RestSharp",
-          "Item2": "[106.3.1, )"
+          "Item2": "[106.15.0, )"
+        },
+        {
+          "Item1": "UiPath.Platform",
+          "Item2": "[21.12.0-preview, )"
         }
       ]
     }
@@ -1676,12 +1683,12 @@
     {
       "Package": {
         "Id": "Microsoft.CSharp",
-        "Version": "4.5.0"
+        "Version": "4.7.0"
       },
       "Assemblies": [
-        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\microsoft.csharp\\4.5.0\\lib\\net45\\_._"
+        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\microsoft.csharp\\4.7.0\\lib\\net45\\_._"
       ],
-      "Path": "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\microsoft.csharp\\4.5.0"
+      "Path": "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\microsoft.csharp\\4.7.0"
     },
     {
       "Package": {
@@ -1947,12 +1954,12 @@
     {
       "Package": {
         "Id": "RestSharp",
-        "Version": "106.3.1"
+        "Version": "106.15.0"
       },
       "Assemblies": [
-        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\restsharp\\106.3.1\\lib\\net452\\RestSharp.dll"
+        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\restsharp\\106.15.0\\lib\\net452\\RestSharp.dll"
       ],
-      "Path": "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\restsharp\\106.3.1"
+      "Path": "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\restsharp\\106.15.0"
     },
     {
       "Package": {
@@ -2307,14 +2314,14 @@
     {
       "Package": {
         "Id": "UiPath.WebAPI.Activities",
-        "Version": "1.7.0"
+        "Version": "1.11.1"
       },
       "Assemblies": [
-        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities\\1.7.0\\lib\\net461\\UiPath.Web.Activities.Design.dll",
-        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities\\1.7.0\\lib\\net461\\UiPath.Web.Activities.dll",
-        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities\\1.7.0\\lib\\net461\\UiPath.Web.dll"
+        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities\\1.11.1\\lib\\net461\\UiPath.Web.Activities.Design.dll",
+        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities\\1.11.1\\lib\\net461\\UiPath.Web.Activities.dll",
+        "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities\\1.11.1\\lib\\net461\\UiPath.Web.dll"
       ],
-      "Path": "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities\\1.7.0"
+      "Path": "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\uipath.webapi.activities\\1.11.1"
     }
   ]
 }
