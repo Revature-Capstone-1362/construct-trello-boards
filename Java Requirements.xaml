@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="__Net_Requirements" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1453,9186" sap2010:WorkflowViewState.IdRef="__Net_Requirements_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="__Net_Requirements" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1453,9341" sap2010:WorkflowViewState.IdRef="__Net_Requirements_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="76">
       <x:String>System.Activities</x:String>
@@ -79,7 +79,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="__Net_Requirements" sap:VirtualizedContainerService.HintSize="468,9121" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="__Net_Requirements" sap:VirtualizedContainerService.HintSize="468,9276" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="Week1JavaRequirementsDT" />
       <Variable x:TypeArguments="x:String" Default="2c87065016ff13e9053398a5e2f51c322440cb870438a880c91cac83d603f7d9" Name="APIToken" />
@@ -383,7 +383,7 @@
               </Assign.Value>
             </Assign>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[List_Name.ToString]" />
-            <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="Complete DataTable containg all the list id's and names within Java Requirements Board.&#xA;" ArrayRow="[{ListID,ListName}]" DataTable="[JavaReqListDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,109" sap2010:WorkflowViewState.IdRef="AddDataRow_6">
+            <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="Complete DataTable containg all the list id's and names within Java Requirements Board.&#xA;" ArrayRow="[{ListID,List_Name}]" DataTable="[JavaReqListDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,109" sap2010:WorkflowViewState.IdRef="AddDataRow_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -394,10 +394,10 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter to obtain the correct List_Name to add the cards to on the Java Requirements board.&#xA;" DataTable="[JavaReqListDT]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="426,116" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[WeeklyCardsListDT]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter to obtain the correct List_Name to add the cards to the Java Requirements board.&#xA;" DataTable="[JavaReqListDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="426,116" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[WeeklyCardsListDT]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-          <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
             <ui:FilterOperationArgument.Column>
               <InArgument x:TypeArguments="x:String">["ListName"]</InArgument>
             </ui:FilterOperationArgument.Column>
@@ -409,7 +409,8 @@
       </ui:FilterDataTable.Filters>
       <ui:FilterDataTable.SelectColumns>
         <scg:List x:TypeArguments="InArgument" Capacity="4">
-          <x:Null />
+          <InArgument x:TypeArguments="x:String">[ListID]</InArgument>
+          <InArgument x:TypeArguments="x:String">[ListName]</InArgument>
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
       <sap:WorkflowViewStateService.ViewState>
@@ -418,6 +419,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:FilterDataTable>
+    <ui:WriteRange AddHeaders="False" DataTable="[WeeklyCardsListDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="426,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="JavaRequirementsTest.xlsx" />
     <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating to obtain the correct List ID for the List_Name above to create cards.&#xA;" DataTable="[WeeklyCardsListDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="426,488" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
@@ -448,7 +450,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[Week1JavaRequirementsDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="426,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Week 1" WorkbookPath="Java Requirements.xlsx" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[Week1JavaRequirementsDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="426,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Week 1" WorkbookPath="Java Requirements.xlsx" />
     <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Week1JavaRequirementsDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="426,585" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
