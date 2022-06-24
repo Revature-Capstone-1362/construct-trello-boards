@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1156,3610</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1156,3650</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="74">
@@ -96,8 +96,6 @@
       <Variable x:TypeArguments="x:String" Name="StartDate" />
       <Variable x:TypeArguments="x:String" Name="TrainingDuration" />
       <Variable x:TypeArguments="x:String" Name="BoardID" />
-      <Variable x:TypeArguments="njl:JObject" Name="BoardIDJSON" />
-      <Variable x:TypeArguments="x:String" Name="BoardInfo" />
       <Variable x:TypeArguments="x:String" Default="userworkspace95961868" Name="Organization" />
       <Variable x:TypeArguments="x:String" Name="OrganizationBoardID" />
       <Variable x:TypeArguments="sd:DataTable" Name="BoardIdDT" />
@@ -106,7 +104,6 @@
       <Variable x:TypeArguments="njl:JObject" Name="ListIDJSONObject" />
       <Variable x:TypeArguments="x:String" Name="ListID" />
       <Variable x:TypeArguments="njl:JArray" Name="ArrOrganizationBoardID" />
-      <Variable x:TypeArguments="njl:JArray" Name="ListDJSONObject" />
       <Variable x:TypeArguments="njl:JArray" Name="ArrListDJSON" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
