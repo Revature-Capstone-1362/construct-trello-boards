@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Trello_Board_Creation_Dispatcher" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1295,2085" sap2010:WorkflowViewState.IdRef="Trello_Board_Creation_Dispatcher_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Trello_Board_Creation_Dispatcher" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1453,2085" sap2010:WorkflowViewState.IdRef="Trello_Board_Creation_Dispatcher_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
       <x:String>System.Activities</x:String>
@@ -72,11 +72,7 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Trello_Board_Creation_Dispatcher" sap:VirtualizedContainerService.HintSize="564,2020" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="AssetValue">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">G:\Revature-Capstone-1362\construct-trello-boards\BoardList.xlsx</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="G:\Revature-Capstone-1362\construct-trello-boards\BoardList.xlsx" Name="AssetValue" />
       <Variable x:TypeArguments="sd:DataTable" Name="MockDataDT" />
       <Variable x:TypeArguments="x:String" Default="Trello Board List" Name="strQueueName" />
       <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="out_transactionitems" />
@@ -171,6 +167,11 @@
               <Variable x:TypeArguments="x:String" Name="BoardName" />
               <Variable x:TypeArguments="x:String" Default="227bc14c5696091a8a5476a5a49e5d22" Name="APIKey" />
               <Variable x:TypeArguments="x:String" Default="2c87065016ff13e9053398a5e2f51c322440cb870438a880c91cac83d603f7d9" Name="APIToken" />
+              <Variable x:TypeArguments="x:String" Name="Organization">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">userworkspace95961868</Literal>
+                </Variable.Default>
+              </Variable>
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -185,7 +186,7 @@
                 <InArgument x:TypeArguments="x:String">[row(0).ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="Create boards for Trainers-TechStack Project Foundations.&#xA;" AuthenticationType="None" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="Create Trainer-Tech Stack Boards" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/boards/?name=&quot;+BoardName+&quot;&amp;key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Password="[Nothing]" TimeoutMS="6000" Username="[Nothing]">
+            <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="Create boards for Trainers-TechStack Project Foundations.&#xA;" AuthenticationType="None" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="Create Trainer-Tech Stack Boards" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/boards/?name=&quot;+BoardName+&quot;&amp;idOrganization=&quot;+Organization+&quot;&amp;key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Password="[Nothing]" TimeoutMS="6000" Username="[Nothing]">
               <ui:HttpClient.Attachments>
                 <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
               </ui:HttpClient.Attachments>
