@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Trello_Board_Creation_Dispatcher" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1453,2085" sap2010:WorkflowViewState.IdRef="Trello_Board_Creation_Dispatcher_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Trello_Board_Creation_Dispatcher" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1606,2085" sap2010:WorkflowViewState.IdRef="Trello_Board_Creation_Dispatcher_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
       <x:String>System.Activities</x:String>
@@ -74,9 +74,14 @@
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="G:\Revature-Capstone-1362\construct-trello-boards\BoardList.xlsx" Name="AssetValue" />
       <Variable x:TypeArguments="sd:DataTable" Name="MockDataDT" />
-      <Variable x:TypeArguments="x:String" Default="Trello Board List" Name="strQueueName" />
+      <Variable x:TypeArguments="x:String" Name="strQueueName">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">userworkspace95961868</Literal>
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="out_transactionitems" />
       <Variable x:TypeArguments="sd:DataTable" Name="BoardNameDT" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -169,7 +174,7 @@
               <Variable x:TypeArguments="x:String" Default="2c87065016ff13e9053398a5e2f51c322440cb870438a880c91cac83d603f7d9" Name="APIToken" />
               <Variable x:TypeArguments="x:String" Name="Organization">
                 <Variable.Default>
-                  <Literal x:TypeArguments="x:String">userworkspace95961868</Literal>
+                  <Literal x:TypeArguments="x:String">uipathcapstone</Literal>
                 </Variable.Default>
               </Variable>
             </Sequence.Variables>

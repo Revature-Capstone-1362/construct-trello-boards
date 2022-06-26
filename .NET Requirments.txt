@@ -1,0 +1,69 @@
+GitHub Repository
+
+Set up repository for Project 1	
+Clone to your computer and initialize	
+First Commit	
+First Push
+
+Project Repository
+
+Local Directory (Folder)	
+GitHub Add	
+GitHub Commit	
+GitHub Push
+
+
+Signed Commits
+
+Make a Habit to sign all commits
+
+
+Use-Case Design
+
+Understand what your application is meant to do.	
+Review the architecture diagram	
+Draft an outline of use-cases for the project (Optional)
+
+
+Create Class Library Project for Models
+Initialize Project	
+Add Required Dependencies	
+GitHub Add	
+GitHub Commit	
+GitHub Push
+
+
+User Model Class
+
+User ID	Username	
+Password	
+Role	
+GitHub Add	
+GitHub Commit	
+GitHub Push
+
+
+Ticket Model Class
+
+ID	
+Author	
+Resolver	
+Description	
+Status	
+Amount	
+GitHub Add	
+GitHub Commit	
+GitHub Push
+
+
+
+
+Custom Exceptions
+
+Resource Not Found Exception	
+Username Not Available Exception	
+Invalid Credentials Exception	
+GitHub Add	
+GitHub Commit	
+GitHub Push
+

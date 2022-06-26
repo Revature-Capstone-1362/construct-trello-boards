@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="__Net_Requirements" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1453,9772" sap2010:WorkflowViewState.IdRef="__Net_Requirements_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="__Net_Requirements" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1606,11070" sap2010:WorkflowViewState.IdRef="__Net_Requirements_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="38">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -39,10 +39,10 @@
       <x:String>UiPath.Excel</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -75,15 +75,15 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="__Net_Requirements" sap:VirtualizedContainerService.HintSize="588,9707" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="__Net_Requirements" sap:VirtualizedContainerService.HintSize="602,11005" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="__Net_Requirements" sap:VirtualizedContainerService.HintSize="546,9615" sap2010:WorkflowViewState.IdRef="Sequence_14">
+    <Sequence DisplayName=".NET Requirements" sap:VirtualizedContainerService.HintSize="560,10913" sap2010:WorkflowViewState.IdRef="Sequence_14">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="Week1NETRequirementsDT" />
         <Variable x:TypeArguments="x:String" Default="2c87065016ff13e9053398a5e2f51c322440cb870438a880c91cac83d603f7d9" Name="APIToken" />
@@ -108,26 +108,31 @@
         <Variable x:TypeArguments="x:String" Name="List_Name" />
         <Variable x:TypeArguments="x:String" Name="ListName" />
         <Variable x:TypeArguments="x:String" Name="ListID" />
-        <Variable x:TypeArguments="sd:DataTable" Name="WeeklyCardsListDT" />
         <Variable x:TypeArguments="x:String" Name="ListIDWeeklyCards" />
         <Variable x:TypeArguments="njl:JArray" Name="ArrNETBoardListsJSON" />
         <Variable x:TypeArguments="njl:JObject" Name="BoardIDJSONObject" />
         <Variable x:TypeArguments="x:String" Name="BoardName" />
         <Variable x:TypeArguments="x:String" Name="CardItem" />
+        <Variable x:TypeArguments="x:String" Name="Cardid" />
+        <Variable x:TypeArguments="x:String" Name="CardIDJSON" />
+        <Variable x:TypeArguments="sd:DataTable" Name="CardIDList" />
+        <Variable x:TypeArguments="njl:JArray" Name="ArrCardIDJSON" />
+        <Variable x:TypeArguments="sd:DataTable" Name="ChecklistItemsDT" />
+        <Variable x:TypeArguments="sd:DataTable" Name="WeeklyCardsListDT" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BuildDataTable sap2010:Annotation.AnnotationText="Data Table to store board ID of organization.&#xA;" DataTable="[BoardIDDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="504,101" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Board_x0020_ID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;BoardName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Board_x0020_ID /&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
+      <ui:BuildDataTable sap2010:Annotation.AnnotationText="Data Table to store board ID of organization.&#xA;" DataTable="[BoardIDDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="518,101" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Board_x0020_ID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;BoardName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Board_x0020_ID /&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:BuildDataTable>
-      <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="Create .Net Requirements board.&#xA;&#xA;" AuthenticationType="None" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request Java Board" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/boards/?name=.NET Requirements&amp;idOrganization=&quot;+Organization+&quot;&amp;key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="504,114" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" TimeoutMS="6000" Username="[Nothing]">
+      <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="Create .Net Requirements board.&#xA;&#xA;" AuthenticationType="None" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request Java Board" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/boards/?name=.NET Requirements&amp;idOrganization=&quot;+Organization+&quot;&amp;key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" TimeoutMS="6000" Username="[Nothing]">
         <ui:HttpClient.Attachments>
           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
         </ui:HttpClient.Attachments>
@@ -149,7 +154,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:HttpClient>
-      <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" sap2010:Annotation.AnnotationText="GET Request to obtain ID of boards within organization." AuthenticationType="None" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/organizations/&quot;+Organization+&quot;/boards?key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="504,88" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Result="[OrganizationJSON]" TimeoutMS="6000">
+      <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" sap2010:Annotation.AnnotationText="GET Request to obtain ID of boards within organization." AuthenticationType="None" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/organizations/&quot;+Organization+&quot;/boards?key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="518,88" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Result="[OrganizationJSON]" TimeoutMS="6000">
         <ui:HttpClient.Attachments>
           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
         </ui:HttpClient.Attachments>
@@ -171,8 +176,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:HttpClient>
-      <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="504,59" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_1" JsonArray="[BoardIDJSON]" JsonString="[OrganizationJSON]" />
-      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="504,809" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[BoardIDJSON]">
+      <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="518,59" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_1" JsonArray="[BoardIDJSON]" JsonString="[OrganizationJSON]" />
+      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="518,809" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[BoardIDJSON]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -208,7 +213,7 @@
           </ActivityAction>
         </ui:ForEach.Body>
       </ui:ForEach>
-      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter Data Table to get Board ID for the NET Requirements Board&#xA;" DataTable="[BoardIDDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="504,116" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[BoardIDDT]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter Data Table to get Board ID for the NET Requirements Board&#xA;" DataTable="[BoardIDDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="518,116" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[BoardIDDT]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
@@ -232,7 +237,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="" DataTable="[BoardIDDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="504,519" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="" DataTable="[BoardIDDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="518,519" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -267,8 +272,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[NETRequirementListsDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="504,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Weekly Counter" WorkbookPath=".Net Requirements.xlsx" />
-      <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating through the rows and making a list named after &#xA;every week.&#xA;" DataTable="[NETRequirementListsDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="504,642" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[NETRequirementListsDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="518,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Weekly Counter" WorkbookPath=".Net Requirements.xlsx" />
+      <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating through the rows and making a list named after &#xA;every week.&#xA;" DataTable="[NETRequirementListsDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="518,642" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -320,14 +325,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:BuildDataTable sap2010:Annotation.AnnotationText="Data table to store all of the ID's for lists within NET Requirements Board to add cards to.&#xA;" DataTable="[NETReqListDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="504,116" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;ListID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;ListName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;ListID /&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
+      <ui:BuildDataTable sap2010:Annotation.AnnotationText="Data table to store all of the ID's for lists within NET Requirements Board to add cards to.&#xA;" DataTable="[NETReqListDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="518,116" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;ListID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;ListName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;ListID /&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:BuildDataTable>
-      <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" sap2010:Annotation.AnnotationText="GET Request to obtain all the lists within the NET &#xD;&#xA;Requirements Board.&#xA;" AuthenticationType="None" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/boards/&quot;+ListBoardID+&quot;/lists?key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="504,114" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="GET" Result="[NETBoardListsJSON]" TimeoutMS="6000">
+      <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" sap2010:Annotation.AnnotationText="GET Request to obtain all the lists within the NET &#xD;&#xA;Requirements Board.&#xA;" AuthenticationType="None" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/boards/&quot;+ListBoardID+&quot;/lists?key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="HttpClient_4" Method="GET" Result="[NETBoardListsJSON]" TimeoutMS="6000">
         <ui:HttpClient.Attachments>
           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
         </ui:HttpClient.Attachments>
@@ -349,8 +354,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:HttpClient>
-      <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="504,59" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_2" JsonArray="[ArrNETBoardListsJSON]" JsonString="[NETBoardListsJSON]" />
-      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="504,938" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[ArrNETBoardListsJSON]">
+      <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="518,59" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_2" JsonArray="[ArrNETBoardListsJSON]" JsonString="[NETBoardListsJSON]" />
+      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="518,938" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[ArrNETBoardListsJSON]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -398,7 +403,7 @@
           </ActivityAction>
         </ui:ForEach.Body>
       </ui:ForEach>
-      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter to obtain the correct List_Name to add the cards to on the NET Requirements board.&#xA;" DataTable="[NETReqListDT]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="504,116" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[WeeklyCardsListDT]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter to obtain the correct List_Name to add the cards to on the NET Requirements board.&#xD;&#xA;Filter out Week 1&#xA;" DataTable="[NETReqListDT]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="518,131" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[WeeklyCardsListDT]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -422,8 +427,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:WriteRange AddHeaders="False" DataTable="[WeeklyCardsListDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="504,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath=".NETRequirementsTest.xlsx" />
-      <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating to obtain the correct List ID for the List_Name above to create cards.&#xA;" DataTable="[WeeklyCardsListDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="504,488" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+      <ui:WriteRange AddHeaders="False" DataTable="[WeeklyCardsListDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="518,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1:A8" WorkbookPath=".NETRequirementsTest.xlsx" />
+      <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating to obtain the correct List ID for the List_Name above to create cards.&#xA;" DataTable="[WeeklyCardsListDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="518,488" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -453,20 +458,20 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[Week1NETRequirementsDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="504,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Week1" WorkbookPath=".Net Requirements.xlsx" />
-      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Week1NETRequirementsDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="504,585" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+      <ui:ReadRange AddHeaders="True" DataTable="[Week1NETRequirementsDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="518,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="A1:A10" SheetName="Week1" WorkbookPath=".Net Requirements.xlsx" />
+      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Week1NETRequirementsDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="518,1562" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,437" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,1414" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign sap:VirtualizedContainerService.HintSize="426,60" sap2010:WorkflowViewState.IdRef="Assign_8">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[CardItem]</OutArgument>
                 </Assign.To>
@@ -474,8 +479,8 @@
                   <InArgument x:TypeArguments="x:String">[row(0).ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[CardItem.ToString]" />
-              <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="HTTP POST to add a series of cards to the correct list for the week.&#xA;" AuthenticationType="None" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request to Create Cards" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/cards?idList=&quot;+ListIDWeeklyCards+&quot;&amp;name=&quot;+CardItem+&quot;&amp;key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="HttpClient_5" Method="POST" Password="[Nothing]" TimeoutMS="6000" Username="[Nothing]">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="426,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[CardItem.ToString]" />
+              <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="HTTP POST to add a series of cards to the correct list for the week.&#xA;" AuthenticationType="None" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request to Create Cards" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/cards?idList=&quot;+ListIDWeeklyCards+&quot;&amp;name=&quot;+CardItem+&quot;&amp;key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="426,114" sap2010:WorkflowViewState.IdRef="HttpClient_5" Method="POST" Password="[Nothing]" TimeoutMS="6000" Username="[Nothing]">
                 <ui:HttpClient.Attachments>
                   <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                 </ui:HttpClient.Attachments>
@@ -497,11 +502,190 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:HttpClient>
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[CardIDList]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="426,300" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[Cardid]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[row(0).ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
+              <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Read Range to acquire list of Checklist items to add.&#xD;&#xA;" DataTable="[ChecklistItemsDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="426,129" sap2010:WorkflowViewState.IdRef="ReadRange_6" Range="B" SheetName="Week1" WorkbookPath=".Net Requirements.xlsx">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ReadRange>
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[ChecklistItemsDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="426,428" sap2010:WorkflowViewState.IdRef="ForEachRow_12">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,280" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="CheckListItemName" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[CheckListItemName]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[row.ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="HTTP POST Request to create checklists." AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/checklists/&quot;+Cardid+&quot;/checkItems?name=&quot;+CheckListItemName+&quot;&amp;key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="HttpClient_10" Method="POST" TimeoutMS="6000">
+                        <ui:HttpClient.Attachments>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Attachments>
+                        <ui:HttpClient.Cookies>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Cookies>
+                        <ui:HttpClient.Headers>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Headers>
+                        <ui:HttpClient.Parameters>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.Parameters>
+                        <ui:HttpClient.UrlSegments>
+                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                        </ui:HttpClient.UrlSegments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:HttpClient>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
             </Sequence>
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
-      <ui:FilterDataTable DataTable="[NETReqListDT]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="504,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[WeeklyCardsListDT]" SelectColumnsMode="Keep">
+      <ui:BuildDataTable sap2010:Annotation.AnnotationText="Data table to store name and ID of all cards in cucrrent list.&#xA;" DataTable="[CardIDList]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="518,116" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;CardID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;CardName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;CardID&gt;text&lt;/CardID&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:BuildDataTable>
+      <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" sap2010:Annotation.AnnotationText="Get all the cards in present list." AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/lists/&quot;+ListIDWeeklyCards+&quot;/cards?key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="518,88" sap2010:WorkflowViewState.IdRef="HttpClient_11" Method="GET" Result="[CardIDJSON]" TimeoutMS="6000">
+        <ui:HttpClient.Attachments>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+        </ui:HttpClient.Attachments>
+        <ui:HttpClient.Cookies>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+        </ui:HttpClient.Cookies>
+        <ui:HttpClient.Headers>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+        </ui:HttpClient.Headers>
+        <ui:HttpClient.Parameters>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+        </ui:HttpClient.Parameters>
+        <ui:HttpClient.UrlSegments>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+        </ui:HttpClient.UrlSegments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:HttpClient>
+      <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="518,59" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_5" JsonArray="[ArrCardIDJSON]" JsonString="[CardIDJSON]" />
+      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter out cards to Obtain its ID in order to create checklist." DataTable="[CardIDList]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="518,101" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" OutputDataTable="[CardIDList]" SelectColumnsMode="Keep">
+        <ui:FilterDataTable.Filters>
+          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+            <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:String">["CardName"]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["GitHub Repository"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+          </scg:List>
+        </ui:FilterDataTable.Filters>
+        <ui:FilterDataTable.SelectColumns>
+          <scg:List x:TypeArguments="InArgument" Capacity="4">
+            <x:Null />
+          </scg:List>
+        </ui:FilterDataTable.SelectColumns>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:FilterDataTable>
+      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="518,516" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[ArrCardIDJSON]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,382" sap2010:WorkflowViewState.IdRef="Sequence_20">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="njl:JObject" Name="ArrCardIDJSONObject" />
+                <Variable x:TypeArguments="x:String" Name="CardID" />
+                <Variable x:TypeArguments="x:String" Name="CardName" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_4" JsonObject="[ArrCardIDJSONObject]" JsonString="[item.ToString]" />
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="334,129" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[CardID]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[ArrCardIDJSONObject.item("id").ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[CardName]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[ArrCardIDJSONObject.item("name").ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+              </ui:MultipleAssign>
+              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CardID,CardName}]" DataTable="[CardIDList]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+      </ui:ForEach>
+      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter to obtain the correct List_Name to add the cards to on the NET Requirements board.&#xD;&#xA;Filter out Week 2&#xD;&#xA;" DataTable="[NETReqListDT]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="518,131" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[WeeklyCardsListDT]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
@@ -519,8 +703,13 @@
             <x:Null />
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating to obtain the correct List ID for the List_Name above to create cards.&#xA;" DataTable="[WeeklyCardsListDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="504,357" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+      <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating to obtain the correct List ID for the List_Name above to create cards.&#xA;" DataTable="[WeeklyCardsListDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="518,357" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -549,8 +738,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[Week2NETRequirementsDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="504,87" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Week2" WorkbookPath=".Net Requirements.xlsx" />
-      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Week2NETRequirementsDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="504,454" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+      <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[Week2NETRequirementsDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="518,87" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Week2" WorkbookPath=".Net Requirements.xlsx" />
+      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Week2NETRequirementsDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="518,454" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -596,7 +785,7 @@
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
-      <ui:FilterDataTable DataTable="[NETReqListDT]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="504,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[WeeklyCardsListDT]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter to obtain the correct List_Name to add the cards to on the NET Requirements board.&#xD;&#xA;Filter out Week 3" DataTable="[NETReqListDT]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="518,116" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[WeeklyCardsListDT]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
@@ -614,8 +803,13 @@
             <x:Null />
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating to obtain the correct List ID for the List_Name above to create cards.&#xA;" DataTable="[WeeklyCardsListDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="504,357" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
+      <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating to obtain the correct List ID for the List_Name above to create cards.&#xA;" DataTable="[WeeklyCardsListDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="518,357" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -644,8 +838,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[Week3NETRequirementsDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="504,87" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="Week3" WorkbookPath=".Net Requirements.xlsx" />
-      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Week3NETRequirementsDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="504,454" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
+      <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[Week3NETRequirementsDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="518,87" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="Week3" WorkbookPath=".Net Requirements.xlsx" />
+      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Week3NETRequirementsDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="518,454" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -694,7 +888,7 @@
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
-      <ui:FilterDataTable DataTable="[NETReqListDT]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="504,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[WeeklyCardsListDT]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter to obtain the correct List_Name to add the cards to on the NET Requirements board.&#xD;&#xA;Filter out Week 4" DataTable="[NETReqListDT]" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="518,116" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[WeeklyCardsListDT]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
@@ -712,8 +906,13 @@
             <x:Null />
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating to obtain the correct List ID for the List_Name above to create cards.&#xA;" DataTable="[WeeklyCardsListDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="504,357" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
+      <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating to obtain the correct List ID for the List_Name above to create cards.&#xA;" DataTable="[WeeklyCardsListDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="518,357" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -742,75 +941,6 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="504,257" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-        <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_15">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[Week4NETRequirementsDT]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_5" SheetName="Week4" WorkbookPath="Java Requirements.xlsx" />
-          </Sequence>
-        </ui:CommentOut.Body>
-      </ui:CommentOut>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="504,623" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-        <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,545" sap2010:WorkflowViewState.IdRef="Sequence_16">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Week4NETRequirementsDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="426,453" sap2010:WorkflowViewState.IdRef="ForEachRow_10">
-              <ui:ForEachRow.Body>
-                <ActivityAction x:TypeArguments="sd:DataRow">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,306" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_14">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[CardItem]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[row(0).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="HTTP POST to add a series of cards to the correct list for the week.&#xA;" AuthenticationType="None" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request to Create Cards" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/cards?idList=&quot;+ListIDWeeklyCards+&quot;&amp;name=&quot;+CardItem+&quot;&amp;key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="HttpClient_8" Method="POST" TimeoutMS="6000">
-                      <ui:HttpClient.Attachments>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                      </ui:HttpClient.Attachments>
-                      <ui:HttpClient.Cookies>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                      </ui:HttpClient.Cookies>
-                      <ui:HttpClient.Headers>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                      </ui:HttpClient.Headers>
-                      <ui:HttpClient.Parameters>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                      </ui:HttpClient.Parameters>
-                      <ui:HttpClient.UrlSegments>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                      </ui:HttpClient.UrlSegments>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:HttpClient>
-                  </Sequence>
-                </ActivityAction>
-              </ui:ForEachRow.Body>
-            </ui:ForEachRow>
-          </Sequence>
-        </ui:CommentOut.Body>
-      </ui:CommentOut>
     </Sequence>
   </Sequence>
 </Activity>

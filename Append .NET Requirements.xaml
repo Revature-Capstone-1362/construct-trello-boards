@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Copy_List_to_Associates" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1446,9535" sap2010:WorkflowViewState.IdRef="Copy_List_to_Associates_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Copy_List_to_Associates" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1500,9551" sap2010:WorkflowViewState.IdRef="Copy_List_to_Associates_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
       <x:String>System.Activities</x:String>
@@ -74,7 +74,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Copy_List_to_Associates" sap:VirtualizedContainerService.HintSize="570,9470" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Copy_List_to_Associates" sap:VirtualizedContainerService.HintSize="570,9486" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="APIKey">
         <Variable.Default>
@@ -86,9 +86,9 @@
           <Literal x:TypeArguments="x:String">2c87065016ff13e9053398a5e2f51c322440cb870438a880c91cac83d603f7d9</Literal>
         </Variable.Default>
       </Variable>
-      <Variable x:TypeArguments="x:String" Name="Organization">
+      <Variable x:TypeArguments="x:String" Name="CapstoneOrganization">
         <Variable.Default>
-          <Literal x:TypeArguments="x:String">userworkspace95961868</Literal>
+          <Literal x:TypeArguments="x:String">uipathcapstone</Literal>
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:String" Name="OrganizationBoardID" />
@@ -120,6 +120,11 @@
       <Variable x:TypeArguments="x:String" Name="NETListID" />
       <Variable x:TypeArguments="x:String" Name="NETListName" />
       <Variable x:TypeArguments="njl:JObject" Name="ArrNETBoardListObject2" />
+      <Variable x:TypeArguments="x:String" Name="TrelloOrganization">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">userworkspace95961868</Literal>
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -127,7 +132,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:BuildDataTable DataTable="[BoardIdDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="528,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Board_x0020_ID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Board_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Board_x0020_ID /&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="GET Request to obtain ID's of boards on the workspace.&#xA;" AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request Board IDs" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/organizations/&quot;+Organization+&quot;/boards?key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="528,118" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" Result="[OrganizationBoardID]" TimeoutMS="6000">
+    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="GET Request to obtain ID's of boards on the Capstone workspace.&#xA;" AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request Board IDs" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/organizations/&quot;+CapstoneOrganization+&quot;/boards?key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="528,118" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" Result="[OrganizationBoardID]" TimeoutMS="6000">
       <ui:HttpClient.Attachments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Attachments>
@@ -149,7 +154,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:HttpClient>
-    <ui:DeserializeJsonArray sap2010:Annotation.AnnotationText="Deserialize the JSON array to obtain the Board ID's and Names on the workspace." DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="528,103" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_1" JsonArray="[ArrOrganizationBoardID]" JsonString="[OrganizationBoardID]">
+    <ui:DeserializeJsonArray sap2010:Annotation.AnnotationText="Deserialize the JSON array to obtain the Board ID's and Names on the Capstone workspace." DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="528,103" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_1" JsonArray="[ArrOrganizationBoardID]" JsonString="[OrganizationBoardID]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -190,8 +195,8 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[BoardIdDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="528,115" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" WorkbookPath="Trello Workspace Board ID's.xlsx" />
-    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter data table to obtain .NET Requirements Board ID&#xD;&#xA;" DataTable="[BoardIdDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="528,103" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[BoardIdDT]" SelectColumnsMode="Keep">
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[BoardIdDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="528,115" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" WorkbookPath="CapStone Workspace Board ID's.xlsx" />
+    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter data table to obtain .NET Requirements Board ID on Capstone Workspace&#xD;&#xA;" DataTable="[BoardIdDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="528,119" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[BoardIdDT]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -199,7 +204,7 @@
               <InArgument x:TypeArguments="x:String">["Board Name"]</InArgument>
             </ui:FilterOperationArgument.Column>
             <ui:FilterOperationArgument.Operand>
-              <InArgument x:TypeArguments="x:String">[".NET Requirements"]</InArgument>
+              <InArgument x:TypeArguments="x:String">[".NET Project Requirements"]</InArgument>
             </ui:FilterOperationArgument.Operand>
           </ui:FilterOperationArgument>
         </scg:List>
@@ -241,7 +246,7 @@
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
     <ui:BuildDataTable DataTable="[NETBoardListDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="528,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ListID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ListName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;ListID /&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="HTTP GET Request to obtain the lists under .NET Requirements board." AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/boards/&quot;+NETBoardID+&quot;/lists?key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="528,102" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Result="[NETBoardListJSON]" TimeoutMS="6000">
+    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="HTTP GET Request to obtain the lists under .NET Project Requirements board." AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/boards/&quot;+NETBoardID+&quot;/lists?key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="528,102" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" Result="[NETBoardListJSON]" TimeoutMS="6000">
       <ui:HttpClient.Attachments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Attachments>
@@ -299,7 +304,7 @@
       </ui:ForEach.Body>
     </ui:ForEach>
     <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[NETBoardListDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="528,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="NETBoardLists.xlsx" />
-    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter out lists from .NET Requirements to obtain Week 1 to copy.&#xD;&#xA;" DataTable="[NETBoardListDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="528,119" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[NETBoardListDT]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter out lists from .NET Project Requirements Board to obtain Week 1 (Project Design) list to copy.&#xD;&#xA;" DataTable="[NETBoardListDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="528,119" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[NETBoardListDT]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -307,7 +312,7 @@
               <InArgument x:TypeArguments="x:String">["ListName"]</InArgument>
             </ui:FilterOperationArgument.Column>
             <ui:FilterOperationArgument.Operand>
-              <InArgument x:TypeArguments="x:String">["Week 1"]</InArgument>
+              <InArgument x:TypeArguments="x:String">["Week 1 (Project Design)"]</InArgument>
             </ui:FilterOperationArgument.Operand>
           </ui:FilterOperationArgument>
         </scg:List>
@@ -362,7 +367,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BuildDataTable>
-    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="GET Request to obtain ID's of boards on the workspace.&#xA;" AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request Board IDs" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/organizations/&quot;+Organization+&quot;/boards?key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="528,118" sap2010:WorkflowViewState.IdRef="HttpClient_6" Method="GET" Result="[OrganizationBoardID2]" TimeoutMS="6000">
+    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="GET Request to obtain ID's of boards on the Trello workspace.&#xA;" AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request Board IDs" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/organizations/&quot;+TrelloOrganization+&quot;/boards?key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="528,118" sap2010:WorkflowViewState.IdRef="HttpClient_6" Method="GET" Result="[OrganizationBoardID2]" TimeoutMS="6000">
       <ui:HttpClient.Attachments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Attachments>
@@ -384,7 +389,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:HttpClient>
-    <ui:DeserializeJsonArray sap2010:Annotation.AnnotationText="Deserialize the JSON array to obtain the Board ID's and Names on the workspace." DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="528,103" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_3" JsonArray="[ArrOrganizationBoardID2]" JsonString="[OrganizationBoardID2]">
+    <ui:DeserializeJsonArray sap2010:Annotation.AnnotationText="Deserialize the JSON array to obtain the Board ID's and Names on the Trello workspace." DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="528,103" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_3" JsonArray="[ArrOrganizationBoardID2]" JsonString="[OrganizationBoardID2]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -594,7 +599,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:BuildDataTable>
-            <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="HTTP POST to make a copy of Week 1 list from .NET Requirements." AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/lists?name=Week  1&amp;idListSource=&quot;+ListID+&quot;&amp;idBoard=&quot;+NETBoardID+&quot;&amp;key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="436,102" sap2010:WorkflowViewState.IdRef="HttpClient_7" Method="POST" TimeoutMS="6000">
+            <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="HTTP POST to make a copy of  Week 1 (Project Design) list from .NET Project Requirements." AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/lists?name=Week  1 (Project Design)&amp;idListSource=&quot;+ListID+&quot;&amp;idBoard=&quot;+NETBoardID+&quot;&amp;key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="436,102" sap2010:WorkflowViewState.IdRef="HttpClient_7" Method="POST" TimeoutMS="6000">
               <ui:HttpClient.Attachments>
                 <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
               </ui:HttpClient.Attachments>
@@ -674,7 +679,7 @@
                 </ActivityAction>
               </ui:ForEach.Body>
             </ui:ForEach>
-            <ui:FilterDataTable sap2010:Annotation.AnnotationText="Getting List ID of the Week  1 Copy on the .NET Requirements Board." DataTable="[NETBoardListDT2]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="436,103" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[NETBoardListDT2]" SelectColumnsMode="Keep">
+            <ui:FilterDataTable sap2010:Annotation.AnnotationText="Getting List ID of the Week  1 (Project Design) Copy on the .NET Requirements Board." DataTable="[NETBoardListDT2]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="436,103" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[NETBoardListDT2]" SelectColumnsMode="Keep">
               <ui:FilterDataTable.Filters>
                 <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                   <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -682,7 +687,7 @@
                       <InArgument x:TypeArguments="x:String">["ListName"]</InArgument>
                     </ui:FilterOperationArgument.Column>
                     <ui:FilterOperationArgument.Operand>
-                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Week  1"]</InArgument>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">["Week  1 (Project Design)"]</InArgument>
                     </ui:FilterOperationArgument.Operand>
                   </ui:FilterOperationArgument>
                 </scg:List>
