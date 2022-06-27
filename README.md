@@ -4,7 +4,7 @@
 Automation to construct an automation robot that establishes foundations (P1) project boards for new Next Gen cohorts on Trello.
 
 # Technologies Used
-- Tech 1 - Trello API 1.0
+- Tech 1 - Trello API
 - Tech 2 - UiPath Studio 2020.10.7
 - Tech 3 - Orchestrator 22.4.1
 
