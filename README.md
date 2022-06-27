@@ -41,5 +41,4 @@ Here, you instruct other people on how to use your project after they’ve insta
 - Sylvester Gold
 - Matthew Emsak
 
-# License
-This project uses the following license: .
+
