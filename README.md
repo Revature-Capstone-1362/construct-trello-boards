@@ -30,19 +30,20 @@ All the code required to get started
 Images of what it should look like
 Usage
 Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
-# Getting Started
+
 # Setting Up Orchestrator and Accounts
-- In Orchestrator, create a queue to contain the transaction items for the automation.
-- Create a Trello account that will have access to the workspace containing the Project 1 boards and generate an API key and token.
-- Add the API key and token as text assets in Orchestrator.
+  1. In Orchestrator, create a queue to contain the transaction items for the automation.
+  2. Create assets and assign its file path in the value section.
+  3. Create a Trello account that will have access to the workspace containing the Project 1 boards and generate an API key and token.
+  4. Add the API key and token as text assets in Orchestrator.
 
 # Setting Up Automations
-Clone project repository using https://github.com/Revature-Capstone-1362/run-at-risk-assessment.git.
-Open project.json in both AtRiskAssessmentDispatcher and AtRiskAssessmentPerformer folders and publish the projects to Orchestrator.
-Assign processes to robots.
-Navigate to package directory on robot machines, usually located in %userprofile%\.nuget\packages.
-Open config.xlsx in 1.x.x\lib\net45\Data directory of dispatcher and set the queue name.
-Optionally set the path to the directory for input data workbooks. The default directory for input data is the Input folder in this directory.
+  1. Clone project repository using https://github.com/Revature-Capstone-1362/run-at-risk-assessment.git.
+  2. Open project.json in both AtRiskAssessmentDispatcher and AtRiskAssessmentPerformer folders and publish the projects to Orchestrator.
+  3. Assign processes to robots.
+  4. Navigate to package directory on robot machines, usually located in %userprofile%\.nuget\packages.
+  5. Open config.xlsx in 1.x.x\lib\net45\Data directory of dispatcher and set the queue name.
+  6. Optionally set the path to the directory for input data workbooks. The default directory for input data is the Input folder in this directory.
 
 # Contributors
 - Thomas Vo
