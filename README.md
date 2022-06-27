@@ -18,8 +18,7 @@ List of features ready and TODOs for future development
 
 To-do list:
 
-- Enable feature to create cards and checklist items by consuming data.
-- 
+- Enable feature to create cards with checklist items by consuming data.
 
 
 # Setting Up Orchestrator and Accounts
