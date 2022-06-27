@@ -8,7 +8,7 @@ Automation to construct an automation robot that establishes foundations (P1) pr
 - Tech 2 - UiPath Studio 2020.10.7
 - Tech 3 - Orchestrator 22.4.1
 
-#Features
+# Features
 
 List of features ready and TODOs for future development
 
@@ -31,7 +31,7 @@ Images of what it should look like
 Usage
 Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
 
-#Contributors
+# Contributors
 - Thomas Vo
 - Zaur Yusupov
 - Esther Parson
