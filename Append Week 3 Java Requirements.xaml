@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Append_Week_2_Java_Requirements" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1497,11254" sap2010:WorkflowViewState.IdRef="Append_Week_2_Java_Requirements_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Append_Week_3_Java_Requirements" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1497,11254" sap2010:WorkflowViewState.IdRef="Append_Week_3_Java_Requirements_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -77,7 +77,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Append_Week_2_Java_Requirements" sap:VirtualizedContainerService.HintSize="874,11189" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Append_Week_3_Java_Requirements" sap:VirtualizedContainerService.HintSize="874,11189" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -331,7 +331,7 @@
           </Sequence>
         </ui:CommentOut.Body>
       </ui:CommentOut>
-      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter out lists from Java Project Requirements to obtain Week 2 to copy.&#xA;" DataTable="[JavaBoardListDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="790,116" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[JavaBoardListDT]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter out lists from Java Project Requirements to obtain Week 3 to copy.&#xA;" DataTable="[JavaBoardListDT]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="790,116" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[JavaBoardListDT]" SelectColumnsMode="Keep">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
             <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -339,7 +339,7 @@
                 <InArgument x:TypeArguments="x:String">["ListName"]</InArgument>
               </ui:FilterOperationArgument.Column>
               <ui:FilterOperationArgument.Operand>
-                <InArgument x:TypeArguments="x:String">["Week 2 (Project Design)"]</InArgument>
+                <InArgument x:TypeArguments="x:String">["Week 3 (Data Structures)"]</InArgument>
               </ui:FilterOperationArgument.Operand>
             </ui:FilterOperationArgument>
           </scg:List>
@@ -660,7 +660,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:BuildDataTable>
-                              <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="HTTP POST to make a copy of Week 2 (Project Design) list from Java Requirements." AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/lists?name= Week 2 (Project Design)&amp;idListSource=&quot;+ListID+&quot;&amp;idBoard=&quot;+JavaBoardID+&quot;&amp;key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="528,99" sap2010:WorkflowViewState.IdRef="HttpClient_5" Method="POST" TimeoutMS="6000">
+                              <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="HTTP POST to make a copy of Week 3 (Data Structures) list from Java Requirements." AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/lists?name= Week 3 (Data Structures)&amp;idListSource=&quot;+ListID+&quot;&amp;idBoard=&quot;+JavaBoardID+&quot;&amp;key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="528,99" sap2010:WorkflowViewState.IdRef="HttpClient_5" Method="POST" TimeoutMS="6000">
                                 <ui:HttpClient.Attachments>
                                   <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                                 </ui:HttpClient.Attachments>
@@ -682,7 +682,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:HttpClient>
-                              <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="HTTP GET Request to obtain the lists under Java Requirements board in order to obtain ID for the copy of Week 2 (Project Design) before attaching it to each associate in a Java Cohort" AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/boards/&quot;+JavaBoardID+&quot;/lists?key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="528,129" sap2010:WorkflowViewState.IdRef="HttpClient_6" Method="GET" Result="[JavaBoardListJSON2]" TimeoutMS="6000">
+                              <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="HTTP GET Request to obtain the lists under Java Requirements board in order to obtain ID for the copy of Week 3 (Data Structures) before attaching it to each associate in a Java Cohort" AuthenticationType="None" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/boards/&quot;+JavaBoardID+&quot;/lists?key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="528,129" sap2010:WorkflowViewState.IdRef="HttpClient_6" Method="GET" Result="[JavaBoardListJSON2]" TimeoutMS="6000" Username="[Nothing]">
                                 <ui:HttpClient.Attachments>
                                   <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                                 </ui:HttpClient.Attachments>
@@ -751,7 +751,7 @@
                                   </ActivityAction>
                                 </ui:ForEach.Body>
                               </ui:ForEach>
-                              <ui:FilterDataTable sap2010:Annotation.AnnotationText="Getting List ID of the Week  2 Copy on the Java Requirements Board." DataTable="[JavaBoardListDT2]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="528,101" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[JavaBoardListDT2]" SelectColumnsMode="Keep">
+                              <ui:FilterDataTable sap2010:Annotation.AnnotationText="Getting List ID of the Week  3 Copy on the Java Requirements Board." DataTable="[JavaBoardListDT2]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="528,101" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[JavaBoardListDT2]" SelectColumnsMode="Keep">
                                 <ui:FilterDataTable.Filters>
                                   <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                     <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -759,7 +759,7 @@
                                         <InArgument x:TypeArguments="x:String">["ListName"]</InArgument>
                                       </ui:FilterOperationArgument.Column>
                                       <ui:FilterOperationArgument.Operand>
-                                        <InArgument x:TypeArguments="x:String">[" Week 2 (Project Design)"]</InArgument>
+                                        <InArgument x:TypeArguments="x:String">[" Week 3 (Data Structures)"]</InArgument>
                                       </ui:FilterOperationArgument.Operand>
                                     </ui:FilterOperationArgument>
                                   </scg:List>
