@@ -1,18 +1,21 @@
 ## PROJECT NAME
 
 # Project Description
-Here goes your awesome project description!
+Automation to construct an automation robot that establishes foundations (P1) project boards for new Next Gen cohorts on Trello.
 
-Technologies Used
-Tech 1 - version 1.0
-Tech 2 - version 2.0
-Tech 3 - version 3.0
-Features
+# Technologies Used
+- Tech 1 - Trello API 1.0
+- Tech 2 - UiPath Studio 2020.10.7
+- Tech 3 - Orchestrator 22.4.1
+
+#Features
+
 List of features ready and TODOs for future development
 
-Awesome feature 1
-Awesome feature 2
-Awesome feature 3
+- Consume data to create Next Gen Trello project boards for new associate cohorts.
+- Create a new list on the project board for each associate in the cohort with week 1 requirements upon initialization.
+- Add the weekly requirements at specific timeframes through Orchestrator.
+
 To-do list:
 
 Wow improvement to be done 1
@@ -28,8 +31,15 @@ Images of what it should look like
 Usage
 Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
 
-Contributors
-Here list the people who have contributed to this project. (ignore this section, if its a solo project)
+#Contributors
+- Thomas Vo
+- Zaur Yusupov
+- Esther Parson
+- Jonathan Barajas
+- Ying Fan
+- Trianna Nunes
+- Sylvester Gold
+- Matthew Emsak
 
-License
-This project uses the following license: <license_name>.
+# License
+This project uses the following license: .
