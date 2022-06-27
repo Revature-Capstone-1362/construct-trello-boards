@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Append_Week_3_Java_Requirements" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1497,10993" sap2010:WorkflowViewState.IdRef="Append_Week_3_Java_Requirements_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Append_Week_3_Java_Requirements" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1497,11254" sap2010:WorkflowViewState.IdRef="Append_Week_3_Java_Requirements_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -77,13 +77,13 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Append_Week_3_Java_Requirements" sap:VirtualizedContainerService.HintSize="874,10888" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Append_Week_3_Java_Requirements" sap:VirtualizedContainerService.HintSize="874,11189" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Copy_List_to_Associates" sap:VirtualizedContainerService.HintSize="832,10796" sap2010:WorkflowViewState.IdRef="Sequence_21">
+    <Sequence DisplayName="Copy_List_to_Associates" sap:VirtualizedContainerService.HintSize="832,11097" sap2010:WorkflowViewState.IdRef="Sequence_21">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Default="227bc14c5696091a8a5476a5a49e5d22" Name="APIKey" />
         <Variable x:TypeArguments="x:String" Default="2c87065016ff13e9053398a5e2f51c322440cb870438a880c91cac83d603f7d9" Name="APIToken" />
@@ -508,13 +508,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
-      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[BoardIdDT2]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="790,5001" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[BoardIdDT2]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="790,5302" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="740,4853" sap2010:WorkflowViewState.IdRef="Sequence_20">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="740,5154" sap2010:WorkflowViewState.IdRef="Sequence_20">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -570,13 +570,13 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:HttpClient>
               <ui:DeserializeJsonArray DisplayName="Deserialize JSON Array" sap:VirtualizedContainerService.HintSize="698,59" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_4" JsonArray="[ArrJavaBoardList2JSON]" JsonString="[JavaBoardList2JSON]" />
-              <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="698,3981" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[ArrJavaBoardList2JSON]">
+              <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="698,4282" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[ArrJavaBoardList2JSON]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="662,3847" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="662,4148" sap2010:WorkflowViewState.IdRef="Sequence_19">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -605,6 +605,7 @@
                           </scg:List>
                         </ui:MultipleAssign.AssignOperations>
                       </ui:MultipleAssign>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="620,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Moving cards to&quot;+&quot; &quot;+ListName2]" />
                       <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{ListID2,ListName2}]" DataTable="[JavaBoardListDT2]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="620,22" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
                       <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="620,285" sap2010:WorkflowViewState.IdRef="CommentOut_7">
                         <ui:CommentOut.Body>
@@ -618,13 +619,13 @@
                           </Sequence>
                         </ui:CommentOut.Body>
                       </ui:CommentOut>
-                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[JavaBoardListDT2]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="620,3100" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[JavaBoardListDT2]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="620,3270" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="570,2952" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="570,3122" sap2010:WorkflowViewState.IdRef="Sequence_18">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -818,7 +819,18 @@
                                   </ActivityAction>
                                 </ui:ForEachRow.Body>
                               </ui:ForEachRow>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="528,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Moving cards to&quot;+&quot; &quot;+ListName2]" />
+                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="528,261" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+                                <ui:CommentOut.Body>
+                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Moving cards to&quot;+&quot; &quot;+ListName2]" />
+                                  </Sequence>
+                                </ui:CommentOut.Body>
+                              </ui:CommentOut>
                               <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="HTTP POST Request to move all cards to each associate.&#xA;" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://api.trello.com/1/lists/&quot;+JavaListID+&quot;/moveAllCards?idBoard=&quot;+JavaBoardID2+&quot;&amp;idList=&quot;+LIST_ID+&quot;&amp;key=&quot;+APIKey+&quot;&amp;token=&quot;+APIToken+&quot;&quot;]" sap:VirtualizedContainerService.HintSize="528,114" sap2010:WorkflowViewState.IdRef="HttpClient_7" Method="POST" TimeoutMS="6000">
                                 <ui:HttpClient.Attachments>
                                   <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
