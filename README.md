@@ -18,8 +18,8 @@ List of features ready and TODOs for future development
 
 To-do list:
 
-Wow improvement to be done 1
-Wow improvement to be done 2
+- Enable feature to create cards and checklist items by consuming data.
+- 
 
 
 # Setting Up Orchestrator and Accounts
