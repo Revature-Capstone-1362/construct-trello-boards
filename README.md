@@ -14,11 +14,14 @@ List of features ready and TODOs for future development
 
 - Consume data to create Next Gen Trello project boards for new associate cohorts.
 - Create a new list on the project board for each associate in the cohort with week 1 requirements upon initialization.
-- Add the weekly requirements at specific timeframes through Orchestrator.
+- Add the weekly requirements at specific timeframes through Orchestrator triggers.
 
 To-do list:
 
-- Enable feature to create cards with checklist items by consuming data.
+- Construct an automation robot that can distribute relevant information to cohort trainers and managers when a training phase begins and ends.
+- Set dates for the beginning and end of each training phase.
+- Request pdf exit evaluation reports from the QC analyst at the end of each phase.
+- Send automated emails to trainers at the beginning and end of each training phase.
 
 
 # Setting Up Orchestrator and Accounts
