@@ -3780,15 +3780,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\": {}
+    "C:\\Users\\gears\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Append Week 1 DotNet Requirements",
       "projectName": "Append Week 1 DotNet Requirements",
-      "projectPath": "G:\\Revature-Capstone-1362\\construct-trello-boards\\Append Week 1 DotNet Requirements\\.local",
-      "packagesPath": "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\",
-      "outputPath": "G:\\Revature-Capstone-1362\\construct-trello-boards\\Append Week 1 DotNet Requirements\\.local"
+      "projectPath": "D:\\Revature\\Revature-Capstone-1362\\construct-trello-boards\\Append Week 1 DotNet Requirements\\.local",
+      "packagesPath": "C:\\Users\\gears\\.nuget\\packages\\",
+      "outputPath": "D:\\Revature\\Revature-Capstone-1362\\construct-trello-boards\\Append Week 1 DotNet Requirements\\.local"
     },
     "frameworks": {
       "net461": {

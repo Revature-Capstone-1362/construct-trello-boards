@@ -3226,15 +3226,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\": {}
+    "C:\\Users\\gears\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Trello Backlog NextGen Automation",
       "projectName": "Trello Backlog NextGen Automation",
-      "projectPath": "G:\\Revature-Capstone-1362\\construct-trello-boards\\.local",
-      "packagesPath": "C:\\Users\\TLV Properties LLC\\.nuget\\packages\\",
-      "outputPath": "G:\\Revature-Capstone-1362\\construct-trello-boards\\.local"
+      "projectPath": "D:\\Revature\\Revature-Capstone-1362\\construct-trello-boards\\.local",
+      "packagesPath": "C:\\Users\\gears\\.nuget\\packages\\",
+      "outputPath": "D:\\Revature\\Revature-Capstone-1362\\construct-trello-boards\\.local"
     },
     "frameworks": {
       "net461": {
